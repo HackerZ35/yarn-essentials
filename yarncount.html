@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarn Count Calculator</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+</head>
+<body>
+    <header>
+        <h1>Yarn Count Calculator</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="studymaterials.html">Study Materials</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Yarn Count Conversion</h2>
+        <div class="calculator">
+            <!-- Section Selection -->
+            <label for="section-type">Select Conversion Type:</label>
+            <select id="section-type" onchange="showSection()">
+                <option value="direct-to-direct">Direct to Direct</option>
+                <option value="indirect-to-indirect">Indirect to Indirect</option>
+                <option value="direct-to-indirect">Direct to Indirect</option>
+            </select>
+
+            <!-- Direct to Direct Section -->
+            <div id="direct-to-direct" class="conversion-section">
+                <label for="direct-conversion">Select Conversion:</label>
+                <select id="direct-conversion">
+                    <option value="tex-to-denier">Tex → Denier</option>
+                    <option value="denier-to-tex">Denier → Tex</option>
+                    <option value="tex-to-dtex">Tex → Decitex (dtex)</option>
+                    <option value="dtex-to-tex">Decitex (dtex) → Tex</option>
+                    <option value="tex-to-mtex">Tex → Millitex (mtex)</option>
+                    <option value="mtex-to-tex">Millitex (mtex) → Tex</option>
+                    <option value="tex-to-ktex">Tex → Kilotex (ktex)</option>
+                    <option value="ktex-to-tex">Kilotex (ktex) → Tex</option>
+                    <option value="tex-to-lbs-spy">Tex → Pounds per Spyndle (lbs/spy)</option>
+                    <option value="lbs-spy-to-tex">Pounds per Spyndle (lbs/spy) → Tex</option>
+                </select>
+            </div>
+
+            <!-- Indirect to Indirect Section -->
+            <div id="indirect-to-indirect" class="conversion-section" style="display: none;">
+                <label for="indirect-conversion">Select Conversion:</label>
+                <select id="indirect-conversion">
+                    <option value="Ne-to-Nm">English Cotton Count (Ne) → Metric Count (Nm)</option>
+                    <option value="Nm-to-Ne">Metric Count (Nm) → English Cotton Count (Ne)</option>
+                    <option value="Ne-to-New">English Cotton Count (Ne) → Worsted Count (NeW)</option>
+                    <option value="New-to-Ne">Worsted Count (NeW) → English Cotton Count (Ne)</option>
+                    <option value="Ne-to-NeS">English Cotton Count (Ne) → Yorkshire Skein (NeS)</option>
+                    <option value="NeS-to-Ne">Yorkshire Skein (NeS) → English Cotton Count (Ne)</option>
+                    <option value="Ne-to-NeL">English Cotton Count (Ne) → Linen Count (NeL)</option>
+                    <option value="NeL-to-Ne">Linen Count (NeL) → English Cotton Count (Ne)</option>
+                </select>
+            </div>
+
+            <!-- Direct to Indirect Section -->
+            <div id="direct-to-indirect" class="conversion-section" style="display: none;">
+                <label for="direct-indirect-conversion">Select Conversion:</label>
+                <select id="direct-indirect-conversion">
+                    <option value="tex-to-Ne">Tex → English Cotton Count (Ne)</option>
+                    <option value="Ne-to-tex">English Cotton Count (Ne) → Tex</option>
+                    <option value="denier-to-Ne">Denier → English Cotton Count (Ne)</option>
+                    <option value="Ne-to-denier">English Cotton Count (Ne) → Denier</option>
+                    <option value="tex-to-New">Tex → Worsted Count (NeW)</option>
+                    <option value="New-to-tex">Worsted Count (NeW) → Tex</option>
+                    <option value="tex-to-NeS">Tex → Yorkshire Skein (NeS)</option>
+                    <option value="NeS-to-tex">Yorkshire Skein (NeS) → Tex</option>
+                    <option value="tex-to-NeL">Tex → Linen Count (NeL)</option>
+                    <option value="NeL-to-tex">Linen Count (NeL) → Tex</option>
+                </select>
+            </div>
+
+            <!-- Input and Result Section -->
+            <label for="input-value">Enter Value:</label>
+            <input type="number" id="input-value" placeholder="Enter value">
+
+            <button onclick="convertYarnCount()">Convert</button>
+
+            <h3>Result:</h3>
+            <p id="result"></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Yarn Essentials. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/scripts.js"></script>
+</body>
+</html>

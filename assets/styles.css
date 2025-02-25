@@ -1,0 +1,283 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .study-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .level {
+        width: 90%; /* Adjust width to avoid overflow */
+        text-align: center;
+    }
+
+    .term ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .term ul li {
+        margin: 5px 0;
+    }
+}
+/* ========================
+   Global & Reset Styles
+=========================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================
+   Header & Navigation
+=========================== */
+header {
+    background: #0077b6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ========================
+   Main Content
+=========================== */
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ========================
+   Homepage Section
+=========================== */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centered vertically */
+    min-height: 30vh; /* adjust as needed */
+    padding-top: 30px;
+    text-align: center;
+}
+
+/* Button Container for Homepage */
+/* Button Container for Homepage */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center; /* Centers the buttons horizontally */
+    justify-content: center; /* Centers the buttons vertically if needed */
+    text-align: center;
+}
+
+
+
+/* Big Navigation Buttons */
+.big-button {
+    text-decoration: none;
+    background: #0077b6;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    width: 80%;           /* responsive width */
+    max-width: 300px;     /* maximum width */
+}
+
+.big-button:hover {
+    background: #005f8b;
+    transform: scale(1.05);
+}
+
+/* ========================
+   Study Material & Level Styles
+=========================== */
+.study-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.level {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.level h2 {
+    background: #0077b6;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.term {
+    background: #ffffff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.term h3 {
+    color: #ff044f;
+    text-align: center;
+}
+
+.term ul {
+    list-style: none;
+    padding: 0;
+}
+
+.term ul li {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.term ul li a {
+    text-decoration: none;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.term ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ========================
+   Calculator Page Styles
+=========================== */
+.calculator {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calculator label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.calculator select,
+.calculator input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calculator button {
+    width: 100%;
+    padding: 10px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background: #005f8b;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ========================
+   About Page Styles
+=========================== */
+.about-info, .website-purpose {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-info h3, .website-purpose h3 {
+    color: #0077b6;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about-info p, .website-purpose p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ========================
+   Footer
+=========================== */
+footer {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: auto; /* ensures footer stays at the bottom */
+}
+
+footer p {
+    margin: 0;
+}
+
+
