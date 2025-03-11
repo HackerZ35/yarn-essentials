@@ -38,6 +38,169 @@ html, body {
     flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    overflow-x: hidden; /* Fix horizontal scrolling */
+}
+
+/* Ensure all elements stay within the screen width */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================
+   Header & Navigation
+=========================== */
+header {
+    background: #0077b6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures items don't exceed screen width */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ========================
+   Main Content
+=========================== */
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ========================
+   Homepage Section
+=========================== */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centered vertically */
+    min-height: 30vh; /* adjust as needed */
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Button Container for Homepage */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Big Navigation Buttons */
+.big-button {
+    text-decoration: none;
+    background: #0077b6;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    width: 90%;
+    max-width: 300px;
+}
+
+.big-button:hover {
+    background: #005f8b;
+    transform: scale(1.05);
+}
+
+/* ========================
+   Footer
+=========================== */
+footer {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: auto;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .study-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .level {
+        width: 90%; /* Adjust width to avoid overflow */
+        text-align: center;
+    }
+
+    .term ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .term ul li {
+        margin: 5px 0;
+    }
+}
+/* ========================
+   Global & Reset Styles
+=========================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
 /* Make images responsive */
@@ -280,4 +443,30 @@ footer p {
     margin: 0;
 }
 
+/* Top Contributors Section */
+.top-contributors {
+    background: #f8f9fa;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.top-contributors h3 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.top-contributors ul {
+    list-style: none;
+    padding: 0;
+}
+
+.top-contributors ul li {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
 
